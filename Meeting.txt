@@ -89,3 +89,6 @@
 
 Meeting api query:
 me/events?$orderby=start/dateTime&$filter=start/dateTime ge '2024-09-24'&$top=10
+
+
+https://raw.githubusercontent.com/aaisharajput/Adaptive-Card-Template/main/Assets/
