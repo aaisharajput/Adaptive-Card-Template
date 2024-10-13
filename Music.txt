@@ -1,0 +1,54 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.2",
+    "@odata.type": "#microsoft.graph.message",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "Image",
+                    "url": "https://raw.githubusercontent.com/SharePoint/sp-dev-docs/main/assets/ace/calendar-top.png"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "Go with the music flow",
+                    "wrap": true
+                },
+                {
+                    "type": "ActionSet",
+                    "actions": [
+                        {
+                            "type": "Action.OpenUrl",
+                            "title": "Dhundhala",
+                            "url": "https://music.youtube.com/watch?v=qDDyuDMJ8-o&list=LM",
+                            "role": "Link"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Teri Hogaiyaan",
+                    "url": "https://music.youtube.com/watch?v=fCFqEI0PCa8&list=LM"
+                }
+            ]
+        },
+        {
+            "type": "ActionSet",
+            "actions": [
+                {
+                    "type": "Action.OpenUrl",
+                    "title": "Gallan",
+                    "url": "https://music.youtube.com/watch?v=pUQXU3F-vxc&list=LM",
+                    "role": "Link"
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}

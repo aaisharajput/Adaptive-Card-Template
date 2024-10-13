@@ -1,0 +1,79 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Holidays List",
+            "wrap": true,
+            "size": "ExtraLarge",
+            "weight": "Bolder",
+            "spacing": "Medium"
+        },
+        {
+            "type": "ColumnSet",
+"$data":"${value}",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "40px",
+                    "backgroundImage": {
+                        "url": "https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/samples/timeline-holidays/assets/timeline_node.svg",
+                        "horizontalAlignment": "Center",
+                        "fillMode": "RepeatVertically"
+                    },
+                    "horizontalAlignment": "Right"
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "Container",
+                            "spacing": "None",
+                            "minHeight": "4px",
+                           
+                            "items": [
+                                {
+                                    "type": "Container",
+                                    "minHeight": "18px"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${HDate}",
+                                    "wrap": true,
+                                    "weight": "Bolder",
+                                    "color": "Accent"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${Title}",
+                                    "wrap": true,
+                                    "size": "Large",
+                                    "weight": "Bolder",
+                                    "spacing": "Small"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${Day}, ${HDate}",
+                                    "wrap": true,
+                                    "size": "Small",
+                                    "isSubtle": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "16px"
+                }
+            ]
+        }
+    ]
+}
+
+
+Sharepoint Api:
+lists/getbytitle('Holidays')/items?select=Title,Date,Day

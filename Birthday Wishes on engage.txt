@@ -1,0 +1,143 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Today's Birthday",
+      "size": "Medium",
+      "weight": "Default"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Name",
+              "weight": "Bolder",
+              "horizontalAlignment": "left"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Date of Birth",
+              "weight": "Bolder"
+            }
+          ]
+        }
+      ],
+      "style": "emphasis"
+    },
+    {
+      "type": "Container",
+      "$data": "${value}",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${field_1}",
+                  "wrap": true
+                }
+              ]
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${Formatted ? Formatted : 'N/A'}",
+                  "wrap": true
+                }
+              ]
+            }
+          ],
+          "style": "good"
+        },
+        {
+          "type": "Container",
+          "items": [
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.OpenUrl",
+                  "title": "Wish ${field_1} on Engage",
+                  "url": "${EngagePostUrl}"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "isVisible": "${equals(formatDateTime(field_2, 'MM-dd'), formatDateTime(utcNow(), 'MM-dd'))}",
+      "separator": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "Upcoming Birthdays",
+      "size": "Medium",
+      "weight": "Default",
+      "spacing": "Large"
+    },
+    {
+      "type": "Container",
+      "$data": "${value}",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${field_1}",
+                  "wrap": true
+                }
+              ]
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${Formatted ? Formatted : 'N/A'}",
+                  "wrap": true
+                }
+              ]
+            }
+          ],
+          "style": "emphasis"
+        }
+      ],
+      "isVisible": "${and(greater(formatDateTime(field_2, 'MM-dd'), formatDateTime(utcNow(), 'MM-dd')), equals(formatDateTime(field_2, 'MM'), formatDateTime(utcNow(), 'MM')))}",
+      "separator": true
+    }
+  ]
+}
+
+
+
+
+Sharepoint Api:
+lists/getbytitle('AARK_BirthdayList')/items?$select=field_1,Formatted,EngagePostUrl,field_2&$orderby=field_2 asc
+lists/getbytitle('AARK_BirthdayList')/items?$select=field_1,Formatted,EngagePostUrl,field_2&$filter=(field_2 ge '10/01/2024' and field_2 le '10/31/2024')&$orderby=field_2 asc

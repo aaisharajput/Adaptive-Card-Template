@@ -1,0 +1,429 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "${title}",
+                    "wrap": true,
+                    "size": "Large",
+                    "weight": "Bolder",
+                    "spacing": "Large"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "${description}",
+                    "wrap": true
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "backgroundImage": {
+                                "url": "${imageUrls[0]}"
+                            },
+                            "minHeight": "300px",
+                            "bleed": true
+                        },
+                        {
+                            "type": "Column",
+                            "width": "56px",
+                            "backgroundImage": {
+                                "url": "${imageUrls[1]}"
+                            },
+                            "bleed": true,
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "${nextIcon}",
+                                    "width": "24px",
+                                    "height": "24px"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center",
+                            "selectAction": {
+                                "type": "Action.ToggleVisibility",
+                                "title": "Next",
+                                "targetElements": [
+                                    "img_set_1",
+                                    "img_set_2"
+                                ]
+                            }
+                        }
+                    ],
+                    "horizontalAlignment": "Center"
+                }
+            ],
+            "minHeight": "1px",
+            "bleed": true,
+            "spacing": "None",
+            "id": "img_set_1"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "backgroundImage": {
+                                "url": "${imageUrls[1]}"
+                            },
+                            "minHeight": "300px",
+                            "bleed": true
+                        },
+                        {
+                            "type": "Column",
+                            "width": "56px",
+                            "backgroundImage": {
+                                "url": "${imageUrls[2]}"
+                            },
+                            "bleed": true,
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "${nextIcon}",
+                                    "width": "24px",
+                                    "height": "24px"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center",
+                            "selectAction": {
+                                "type": "Action.ToggleVisibility",
+                                "title": "Next",
+                                "targetElements": [
+                                    "img_set_2",
+                                    "img_set_3"
+                                ]
+                            }
+                        }
+                    ],
+                    "horizontalAlignment": "Center"
+                }
+            ],
+            "minHeight": "1px",
+            "bleed": true,
+            "spacing": "None",
+            "isVisible": false,
+            "id": "img_set_2"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "backgroundImage": {
+                                "url": "${imageUrls[2]}"
+                            },
+                            "minHeight": "300px",
+                            "bleed": true
+                        },
+                        {
+                            "type": "Column",
+                            "width": "56px",
+                            "backgroundImage": {
+                                "url": "${imageUrls[3]}"
+                            },
+                            "bleed": true,
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "${nextIcon}",
+                                    "width": "24px",
+                                    "height": "24px"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center",
+                            "selectAction": {
+                                "type": "Action.ToggleVisibility",
+                                "title": "Next",
+                                "targetElements": [
+                                    "img_set_3",
+                                    "img_set_4"
+                                ]
+                            }
+                        }
+                    ],
+                    "horizontalAlignment": "Center"
+                }
+            ],
+            "minHeight": "1px",
+            "bleed": true,
+            "spacing": "None",
+            "isVisible": false,
+            "id": "img_set_3"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "backgroundImage": {
+                                "url": "${imageUrls[3]}"
+                            },
+                            "minHeight": "300px",
+                            "bleed": true
+                        },
+                        {
+                            "type": "Column",
+                            "width": "56px",
+                            "backgroundImage": {
+                                "url": "${imageUrls[4]}"
+                            },
+                            "bleed": true,
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "${nextIcon}",
+                                    "width": "24px",
+                                    "height": "24px"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center",
+                            "selectAction": {
+                                "type": "Action.ToggleVisibility",
+                                "title": "Next",
+                                "targetElements": [
+                                    "img_set_4",
+                                    "img_set_5"
+                                ]
+                            }
+                        }
+                    ],
+                    "horizontalAlignment": "Center"
+                }
+            ],
+            "minHeight": "1px",
+            "bleed": true,
+            "spacing": "None",
+            "isVisible": false,
+            "id": "img_set_4"
+        },
+        {
+            "type": "Container",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "backgroundImage": {
+                                "url": "${imageUrls[4]}"
+                            },
+                            "minHeight": "300px",
+                            "bleed": true
+                        },
+                        {
+                            "type": "Column",
+                            "width": "56px",
+                            "backgroundImage": {
+                                "url": "${imageUrls[0]}"
+                            },
+                            "bleed": true,
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "${nextIcon}",
+                                    "width": "24px",
+                                    "height": "24px"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center",
+                            "selectAction": {
+                                "type": "Action.ToggleVisibility",
+                                "title": "Next",
+                                "targetElements": [
+                                    "img_set_5",
+                                    "img_set_1"
+                                ]
+                            }
+                        }
+                    ],
+                    "horizontalAlignment": "Center"
+                }
+            ],
+            "minHeight": "1px",
+            "bleed": true,
+            "spacing": "None",
+            "isVisible": false,
+            "id": "img_set_5"
+        },
+        {
+            "type": "Container",
+            "style": "default",
+            "bleed": true,
+            "items": [
+                {
+                    "type": "Container",
+                    "minHeight": "24px",
+                    "spacing": "Medium",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Photo Gallery",
+                            "weight": "Bolder",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "$data": "${value}",
+                    "items": [
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "80px",
+                                    "minHeight": "100px",
+                                    "items": [
+                                        {
+                                            "type": "Container",
+                                            "backgroundImage": {
+                                                "url": "${ImageUrl}",
+                                                "horizontalAlignment": "Center",
+                                                "verticalAlignment": "Center"
+                                            },
+                                            "minHeight": "80px",
+                                            "horizontalAlignment": "Center",
+                                            "verticalContentAlignment": "Center"
+                                        }
+                                    ],
+                                    "verticalContentAlignment": "Center",
+                                    "horizontalAlignment": "Left"
+                                },
+                                {
+                                    "type": "Column",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${Title}",
+                                            "wrap": true,
+                                            "weight": "Bolder",
+                                            "size": "Medium"
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${description}",
+                                            "isSubtle": true,
+                                            "spacing": "small",
+                                            "maxLines": 3,
+                                            "width": "100px",
+                                            "wrap": true
+                                        }
+                                    ],
+                                    "verticalContentAlignment": "Center",
+                                    "width": "stretch"
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": "20px",
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "url": "https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/samples/visual-list/assets/arrow-right.png",
+                                            "horizontalAlignment": "Right",
+                                            "width": "20px",
+                                            "height": "20px",
+                                            "selectAction": {
+                                                "type": "Action.OpenUrl",
+                                                "url": "${folderPath}"
+                                            }
+                                        }
+                                    ],
+                                    "verticalContentAlignment": "Center"
+                                }
+                            ],
+                            "selectAction": {
+                                "type": "Action.ToggleVisibility"
+                            }
+                        }
+                    ],
+                    "separator": true
+                }
+            ],
+            "spacing": "Medium",
+            "id": "tab_menu"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "backgroundImage": {
+        "horizontalAlignment": "Center"
+    }
+}
+
+
+
+
+Json Data:
+
+{
+    "title": "Moments Frozen in Time",
+    "description": "A gallery that captures fleeting moments and transforms them into eternal memories. Each photograph holds a story, preserving a slice of time with perfect clarity.",
+    "imageUrls": [
+        "https://aarkglobalinc.com/customerfocus.png",
+        "https://aarkglobalinc.com/cultureoflearning.png",
+        "https://aarkglobalinc.com/hardwork.png",
+        "https://aarkglobalinc.com/engineeringexcellence.png",
+        "https://aarkglobalinc.com/celebratingsuccesstogether.png"
+    ],
+    "nextIcon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9aOUHVUv6V7lP4jymjHLyKuN8z0Upm3jrbg&s",
+     "value": [
+    {
+        "ImageUrl": "https://www.desunhospital.com/wp-content/uploads/2017/10/warm-glow-from-numerous-diwali-diyas-casts-soft-light-celebrating-festival-lights.jpg",
+        "Title": "Diwali",
+        "description": "First Diwali celebrations at Aark. Sharing happiness with kids at Balgran orphanage.",
+        "folderPath":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/SitePages/photos.aspx#diwali"
+      },
+      {
+      "ImageUrl": "https://thumbs.dreamstime.com/b/inauguration-red-waving-ribbon-banner-illustration-design-over-white-31864613.jpg",
+      "Title": "Inauguration",
+      "description": "Inaugurated on 5th July marking a significant step in the AARK journey.",
+      "folderPath":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/SitePages/photos.aspx?OR=Teams-HL&CT=1698832479083&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMzA5MjkxMTIwNyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D#inauguration"
+    },{
+      "ImageUrl": "https://blogcdn.aakash.ac.in/wordpress_media/2022/09/Blog-Image-27.jpg",
+      "Title": "Engineer's Day",
+      "description": "Celebrated to honour the contributions of Bharat Ratna Sir Mokshagundam Visvesvaraya.",
+      "folderPath":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/SitePages/photos.aspx?OR=Teams-HL&CT=1698832479083&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMzA5MjkxMTIwNyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D#engineer-s-day"
+    },
+    {
+      "ImageUrl": "https://kmslh.com/wp-content/uploads/2022/05/shutterstock_606179093.jpg",
+      "Title": "Onboarding",
+      "description": "We are thrilled to have you onboard and excited to embark on this journey together.",
+      "folderPath":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/SitePages/photos.aspx#onboarding"
+    },{
+      "ImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk82qqzIURlda1ch-J4mpd4RLUhn8ka6qwtg&s",
+      "Title": "Birthday Celebrations",
+      "description": "At AARK to foster positive Workplace culture, team building and Boost Morale of employees.",
+      "folderPath":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/SitePages/photos.aspx?OR=Teams-HL&CT=1698832479083&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMzA5MjkxMTIwNyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D#birthday-celebrations"
+    },
+    {
+      "ImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFLYHIiedx3klunKsGmRbTynBfXmrtgVnjJg&s",
+      "Title": "Independence Day",
+      "description": "Celebrating freedom, unity and diversity on 15th August celebrations with AARK'ites.",
+      "folderPath":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/SitePages/photos.aspx?OR=Teams-HL&CT=1698832479083&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMzA5MjkxMTIwNyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D#independence-day"
+    }
+  ]
+}

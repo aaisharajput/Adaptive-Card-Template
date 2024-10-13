@@ -1,0 +1,125 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "style": "default",
+            "bleed": true,
+            "items": [
+                {
+                    "type": "Container",
+                    "minHeight": "24px",
+                    "spacing": "Medium",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Select Template to apply",
+                            "wrap": true,
+                            "weight":"bolder"
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "$data": "${value}",
+                    "items": [
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "80px",
+                                    "minHeight": "80px",
+                                    "items": [
+                                        {
+                                            "type": "Container",
+                                            "backgroundImage": {
+                                                "url": "${ImageUrl}",
+                                                "horizontalAlignment": "Center",
+                                                "verticalAlignment": "Center"
+                                            },
+                                            "minHeight": "80px",
+                                            "horizontalAlignment": "Center",
+                                            "verticalContentAlignment": "Center"
+                                        }
+                                    ],
+                                    "verticalContentAlignment": "Center",
+                                    "horizontalAlignment": "Left"
+                                },
+                                {
+                                    "type": "Column",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${Title}",
+                                            "wrap": true,
+                                            "weight": "Bolder",
+                                            "size": "Medium"
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${description}",
+                                            "isSubtle": true,
+                                            "wrap": true,
+                                            "spacing": "Small",
+                                            "maxLines": 2
+                                        }
+                                    ],
+                                    "verticalContentAlignment": "Center",
+                                    "width": "stretch"
+                                }
+                            ],
+                            "selectAction": {
+                                "type": "Action.OpenUrl",
+                                "url": "${templateUrl}"
+                            },
+                            "style": "emphasis"
+                        }
+                    ],
+                    "separator": true
+                }
+            ],
+            "spacing": "Medium",
+            "id": "tab_menu"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "backgroundImage": {
+        "horizontalAlignment": "Center"
+    }
+}
+
+
+Json Data:
+
+{
+  "value": [
+    {
+      "ImageUrl": "https://www.pngitem.com/pimgs/m/522-5226537_clock-and-calendar-icon-hd-png-download.png",
+      "Title": "Leave",
+      "description": "Request for Leave",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220HJ6TP4VA7K8WGDYKR6E718H51VRZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    },
+    {
+        "ImageUrl": "https://cdn-icons-png.freepik.com/256/9073/9073032.png?semt=ais_hybrid",
+        "Title": "Work from Home",
+        "description": "Request for Work from Home",
+        "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220H94T90G2BJXWJC5JKC3C5Y5H9WRZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+      },{
+      "ImageUrl": "https://icons.veryicon.com/png/128/miscellaneous/8atour/ticket-02.png",
+      "Title": "Bussiness Trip",
+      "description": "Request for Bussiness Travel",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220GJ76KSGQD3FMGW2YEN88ZV50A18ZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    },{
+      "ImageUrl": "https://png.pngtree.com/png-vector/20220810/ourmid/pngtree-refund-icon-transaction-satisfy-rounded-vector-png-image_19467558.jpg",
+      "Title": "Reimbursement",
+      "description": "Request for Basic Approval",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220G24196QN34DAHXK858S1NB5SYRRZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    }
+  ]
+}
+
+
+Go to request list link:
+https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/

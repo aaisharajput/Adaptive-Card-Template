@@ -1,0 +1,106 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Birthdays this month",
+      "size": "Large",
+      "weight": "Bolder"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Name",
+              "weight": "Bolder"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Date of Birth",
+              "weight": "Bolder"
+            }
+          ]
+        }
+      ],
+"style": "emphasis"
+    },
+    {
+      "type": "Container",
+      "$data": "${value}",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${title}",
+                  "wrap": true
+                }
+              ]
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${Formatted ? Formatted : 'N/A'}",
+                  "wrap": true
+                }
+              ]
+            }
+          ]
+,
+                    "selectAction": {
+                        "type": "Action.OpenUrl",
+                        "url": "${ChatLink}"
+                    },
+         "style": "${if(equals(formatDateTime(field_1, 'MM-dd'), formatDateTime(utcNow(), 'MM-dd')), 'good', if(greater(formatDateTime(field_1, 'MM-dd'), formatDateTime(utcNow(), 'MM-dd')), 'accent', 'warning'))}"
+
+        },
+        {
+          "type": "Container",
+          "items": [
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.OpenUrl",
+                  "title": "Send Wishes to ${Title}",
+                  "url": "${ChatLink}"
+                }
+              ],
+              "isVisible": "${equals(formatDateTime(field_1, 'MM-dd'), formatDateTime(utcNow(), 'MM-dd'))}"
+            }
+          ]
+        }
+      ],
+      "separator": true
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
+
+
+
+
+Sharepoint Api:
+lists/getbytitle('Birthday_list')/items?$select=Title,Formatted,ChatLink,field_1&$filter=(field_1 ge '10/01/2024' and field_1 le '10/31/2024')&$orderby=field_1 asc
+
+lists/getbytitle('Birthday_list')/items

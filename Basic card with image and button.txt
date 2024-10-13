@@ -1,0 +1,125 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "Image",
+          "url": "https://system.netsuite.com/core/media/media.nl?id=10238945&c=835472&h=cFDMyib9SRKwUOOH9VQS3RtEY3lkZujdgORGmhim2zlRYI9B",
+          "size": "Large",
+          "altText": "Event 1"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Event Title 1",
+          "weight": "Bolder",
+          "wrap": true,
+          "spacing": "Medium"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Description of Event 1 goes here.",
+          "wrap": true,
+          "spacing": "Small"
+        },
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "title": "View More",
+              "url": "https://example.com/event1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "Image",
+          "url": "https://system.netsuite.com/core/media/media.nl?id=10238945&c=835472&h=cFDMyib9SRKwUOOH9VQS3RtEY3lkZujdgORGmhim2zlRYI9B",
+          "size": "Large",
+          "altText": "Event 2"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Event Title 2",
+          "weight": "Bolder",
+          "wrap": true,
+          "spacing": "Medium"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Description of Event 2 goes here.",
+          "wrap": true,
+          "spacing": "Small"
+        },
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "title": "View More",
+              "url": "https://example.com/event2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "Image",
+          "url": "https://system.netsuite.com/core/media/media.nl?id=10238945&c=835472&h=cFDMyib9SRKwUOOH9VQS3RtEY3lkZujdgORGmhim2zlRYI9B",
+          "size": "Large",
+          "altText": "Event 3"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Event Title 3",
+          "weight": "Bolder",
+          "wrap": true,
+          "spacing": "Medium"
+        },
+        {
+          "type": "TextBlock",
+          "text": "Description of Event 3 goes here.",
+          "wrap": true,
+          "spacing": "Small"
+        },
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "title": "View More",
+              "url": "https://example.com/event3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Previous",
+      "data": {
+        "action": "previous"
+      }
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Next",
+      "data": {
+        "action": "next"
+      }
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}

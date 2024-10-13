@@ -1,0 +1,75 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Name",
+              "weight": "Bolder"
+       }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Date",
+              "weight": "Bolder"
+            }
+          ]
+        }
+      ],
+ "style": "default"
+    },
+    {
+      "type": "Container",
+      "$data": "${value}",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${HolidayName}",
+                  "wrap": true
+                }
+              ]
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${Title ? Title : 'N/A'}",
+                  "wrap": true
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "separator": true,
+ "style": "default"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
+
+
+
+Sharepoint API:
+lists/getbytitle('Holidays')/items?select=Title,Date,Day

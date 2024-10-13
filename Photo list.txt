@@ -1,0 +1,142 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "style": "default",
+            "bleed": true,
+            "items": [
+                {
+                    "type": "Container",
+                    "minHeight": "24px",
+                    "spacing": "Medium",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Photo Gallery",
+                            "wrap": true
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "$data": "${value}",
+                    "items": [
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "80px",
+                                    "minHeight": "80px",
+                                    "items": [
+                                        {
+                                            "type": "Container",
+                                            "backgroundImage": {
+                                                "url": "${ImageUrl}",
+                                                "horizontalAlignment": "Center",
+                                                "verticalAlignment": "Center"
+                                            },
+                                            "minHeight": "80px",
+                                            "horizontalAlignment": "Center",
+                                            "verticalContentAlignment": "Center"
+                                        }
+                                    ],
+                                    "verticalContentAlignment": "Center",
+                                    "horizontalAlignment": "Left"
+                                },
+                                {
+                                    "type": "Column",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${Title}",
+                                            "wrap": true,
+                                            "weight": "Bolder",
+                                            "size": "Medium"
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${description}",
+                                            "isSubtle": true,
+                                            "wrap": true,
+                                            "spacing": "Small",
+                                            "maxLines": 2
+                                        }
+                                    ],
+                                    "verticalContentAlignment": "Center",
+                                    "width": "stretch"
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": "20px",
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "url": "https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/samples/visual-list/assets/arrow-right.png",
+                                            "horizontalAlignment": "Right",
+                                            "width": "20px",
+                                            "height": "20px",
+                                            "selectAction": {
+                                                "type": "Action.OpenUrl",
+                                                "url": "${folderPath}"
+                                            }
+                                        }
+                                    ],
+                                    "verticalContentAlignment": "Center"
+                                }
+                            ],
+                            "selectAction": {
+                                "type": "Action.ToggleVisibility"
+                            }
+                        }
+                    ],
+                    "separator": true
+                }
+            ],
+            "spacing": "Medium",
+            "id": "tab_menu"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "backgroundImage": {
+        "horizontalAlignment": "Center"
+    }
+}
+
+
+
+data json:
+
+{
+  "value": [
+    {
+      "ImageUrl": "https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/samples/visual-list/assets/korean.jpg",
+      "Title": "Diwali",
+      "description": "Celebration start",
+      "folderPath":"aarkglobalinc.com"
+    },
+    {
+        "ImageUrl": "https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/samples/visual-list/assets/korean.jpg",
+        "Title": "Diwali",
+        "description": "Celebration start",
+        "folderPath":"aarkglobalinc.com"
+      },{
+      "ImageUrl": "https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/samples/visual-list/assets/korean.jpg",
+      "Title": "Diwali",
+      "description": "Celebration start",
+      "folderPath":"aarkglobalinc.com"
+    },{
+      "ImageUrl": "https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/samples/visual-list/assets/korean.jpg",
+      "Title": "Diwali",
+      "description": "Celebration start",
+      "folderPath":"aarkglobalinc.com"
+    },{
+      "ImageUrl": "https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/samples/visual-list/assets/korean.jpg",
+      "Title": "Diwali",
+      "description": "Celebration start",
+      "folderPath":"aarkglobalinc.com"
+    }
+  ]
+}

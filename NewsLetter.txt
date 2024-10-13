@@ -1,0 +1,57 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "$data": "${value}",
+            "items": [
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "${imgUrl}"
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "size": "Medium",
+                    "weight": "Bolder",
+                    "text": "${Title}"
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "${description}",
+                    "wrap": true
+                }
+            ],
+            "style": "good",
+            "separator": true,
+            "spacing": "Medium",
+            "selectAction": {
+                "type": "Action.OpenUrl",
+                "url": "${url}"
+            }
+        },
+        {
+            "type": "Image"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5"
+}
+
+
+Json Data:
+
+{
+  "value": [
+    {
+      "imgUrl":"https://aarkglobalinc.sharepoint.com/sites/Newsletter/SiteAssets/SitePages/Home/3286679499-newsletter-header-black.svg",
+      "Title": "Newsletter1",
+      "description": "June - Aug, 2024",
+      "url":"https://aarkglobalinc.sharepoint.com/sites/Newsletter"    
+    }
+  ]
+}

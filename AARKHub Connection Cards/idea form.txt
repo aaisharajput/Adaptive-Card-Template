@@ -1,0 +1,67 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+      {
+        "type": "TextBlock",
+        "text": "Submit Your New Idea",
+        "size": "medium",
+        "weight": "Bolder"
+      },
+      {
+        "type": "Input.Text",
+        "label": "Name",
+        "id": "employeeName",
+        "isRequired": true,
+        "errorMessage": "Name is required",
+        "placeholder": "Enter your name"
+      },
+      {
+        "type": "Input.Text",
+        "label": "Email",
+        "id": "employeeEmail",
+        "isRequired": true,
+        "errorMessage": "Email is required",
+        "placeholder": "Enter your company mail"
+      },
+      {
+        "type": "Input.Text",
+        "label": "Idea Title",
+        "id": "ideas",
+        "isRequired": true,
+        "errorMessage": "Title is required",
+        "placeholder": "Title of your idea"
+      },
+      {
+        "type": "Input.Text",
+        "label": "Comments",
+        "id": "comments",
+        "isMultiline": true,
+        "isRequired": true,
+        "errorMessage": "Comments are required",
+        "placeholder": "Write your idea"
+      },
+      {
+        "type": "ActionSet",
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "title": "Submit",
+            "url": "https://prod-30.centralindia.logic.azure.com:443/workflows/50e4aa4a60b1477e95b818d5138d800c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=9JqbaqQCFCCNC56pZ58wtv8pBsH1gv913m3yRJznyqA", 
+            "method": "POST",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": "{{ \"employeeName\": \"${employeeName}\",\"employeeEmail\": \"${employeeEmail}\", \"ideas\": \"${ideas}\", \"comments\": \"${comments}\" }}",
+            "role": "Button",
+          "style": "positive"
+        }
+        ]
+      }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
+
