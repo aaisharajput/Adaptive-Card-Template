@@ -131,5 +131,3 @@
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
   }
   
-
-  https://prod-30.centralindia.logic.azure.com:443/workflows/50e4aa4a60b1477e95b818d5138d800c/triggers/manual/paths/invoke?api-version=2016-06-01
