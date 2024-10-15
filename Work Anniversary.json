@@ -1,0 +1,117 @@
+{
+  "type": "AdaptiveCard",
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "Container",
+      "bleed": true,
+      "style": "default",
+      "minHeight": "240px",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Send praise to your colleagues",
+          "wrap": true,
+          "fontType": "Default",
+          "size": "ExtraLarge",
+          "weight": "Bolder",
+          "color": "Default",
+          "isSubtle": false,
+          "horizontalAlignment": "Center"
+        }
+      ],
+      "backgroundImage": {
+        "url": "https://www.culturemonkey.io/employee-engagement/content/images/2023/08/work-anniversary.png"
+      }
+    },
+    {
+      "type": "Container",
+      "minHeight": "32px"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Anniversaries are coming up 🥳",
+      "wrap": true,
+      "fontType": "Default",
+      "size": "Medium",
+      "weight": "Bolder",
+      "color": "Default"
+    },
+    {
+      "type": "Container",
+      "spacing": "Small"
+    },
+    {
+      "type": "ColumnSet",
+      "$data": "${value}",
+      "columns": [
+        {
+          "type": "Column",
+          "minHeight": "40px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "${Image}",
+              "width": "48px",
+              "height": "48px"
+            }
+          ],
+          "verticalContentAlignment": "Center",
+          "width": 8
+        },
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${field_1}",
+              "wrap": true,
+              "size": "Default",
+              "horizontalAlignment": "Left",
+              "weight": "Bolder"
+            },
+            {
+              "type": "TextBlock",
+              "text": "${role}",
+              "wrap": true,
+              "isSubtle": true,
+              "spacing": "Small",
+              "size": "Small"
+            }
+          ],
+          "verticalContentAlignment": "Top",
+          "width": 20
+        },
+        {
+          "type": "Column",
+          "verticalContentAlignment": "Top",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${formatDateTime(substring(JoiningDate,0,19), 'dd/MM/yyyy  hh:mm')}",
+              "wrap": true,
+              "size": "Default",
+              "horizontalAlignment": "Right"
+            }
+          ],
+          "width": 20
+        },
+        {
+          "type": "Column",
+          "width": "20px",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/samples/simple-list/assets/arrowforward.png",
+              "width": "20px",
+              "height": "20px"
+            }
+          ]
+        }
+      ],
+      "separator": true,
+      "spacing": "Medium"
+    }
+  ]
+}
