@@ -1,0 +1,192 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+
+        {
+            "type": "TextBlock",
+            "text": "Today's Work Anniversary",
+            "wrap": true,
+            "fontType": "Default",
+            "size": "Medium",
+            "weight": "Bolder",
+            "color": "Default"
+        },
+        {
+            "type": "Container",
+            "spacing": "Small"
+        },
+        {
+            "type": "ColumnSet",
+            "$data": "${value}",
+            "columns": [
+                {
+                    "type": "Column",
+                    "minHeight": "40px",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "${ImageUrl.Url}",
+                            "width": "48px",
+                            "height": "48px"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "width": 15
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${field_1}",
+                            "wrap": true,
+                            "size": "Default",
+                            "horizontalAlignment": "Left",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${DaysSinceJoining} Anniversary",
+                            "wrap": true,
+                            "isSubtle": true,
+                            "spacing": "Small",
+                            "size": "Small"
+                        }
+                    ],
+                    "verticalContentAlignment": "Top",
+                    "width": 30
+                },
+                {
+                    "type": "Column",
+                    "verticalContentAlignment": "Top",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": " ${formatDateTime(JoiningDate, 'dd/MM')}",
+                            "wrap": true,
+                            "size": "Default",
+                            "horizontalAlignment": "Right"
+                        }
+                    ],
+                    "width": 20
+                },
+                {
+                    "type": "Column",
+                    "width": "5px"
+                }
+            ],
+           "isVisible": "${equals(formatDateTime(JoiningDate, 'MM-dd'), formatDateTime(utcNow(), 'MM-dd'))}",
+            "separator": true,
+            "spacing": "Medium"
+        },
+        {
+            "type": "Container",
+            "spacing": "Medium",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-",
+                                    "wrap": true,
+                                    "horizontalAlignment": "Left"
+                                }
+                            ]
+                        }
+                    ],
+                    "style": "default"
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "Anniversaries Coming Up",
+            "wrap": true,
+            "fontType": "Default",
+            "size": "Medium",
+            "weight": "Bolder",
+            "color": "Default"
+        },
+        {
+            "type": "Container",
+            "spacing": "Small"
+        },
+        {
+            "type": "ColumnSet",
+            "$data": "${value}",
+            "columns": [
+                {
+                    "type": "Column",
+                    "minHeight": "40px",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "${ImageUrl.Url}",
+                            "width": "48px",
+                            "height": "48px"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "width": 15
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${field_1}",
+                            "wrap": true,
+                            "size": "Default",
+                            "horizontalAlignment": "Left",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${DaysSinceJoining} Anniversary",
+                            "wrap": true,
+                            "isSubtle": true,
+                            "spacing": "Small",
+                            "size": "Small"
+                        }
+                    ],
+                    "verticalContentAlignment": "Top",
+                    "width": 30
+                },
+                {
+                    "type": "Column",
+                    "verticalContentAlignment": "Top",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": " ${formatDateTime(JoiningDate, 'dd/MM')}",
+                            "wrap": true,
+                            "size": "Default",
+                            "horizontalAlignment": "Right"
+                        }
+                    ],
+                    "width": 20
+                },
+                {
+                    "type": "Column",
+                    "width": "5px"
+                }
+            ],
+           "isVisible": "${greater(formatDateTime(JoiningDate, 'MM-dd'), formatDateTime(utcNow(), 'MM-dd'))}",
+            "separator": true,
+            "spacing": "Medium"
+        }
+    ]
+}
+
+
+Data Json:
+
+
+lists/getbytitle('AARK_BirthdayList')/items?$select=ImageUrl,field_1,JoiningDate,Formatted,DaysSinceJoining,EngagePostUrl,field_2&$orderby=JoiningDate asc

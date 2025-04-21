@@ -1,0 +1,375 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Today's Birthday",
+            "size": "Medium",
+            "weight": "Bolder"
+        },
+        {
+            "type": "Container",
+            "$data": "${value}",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "minHeight": "40px",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "${ImageUrl.Url}",
+                                    "width": "48px",
+                                    "height": "48px"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center",
+                            "width": 15
+                        },
+                        {
+                            "type": "Column",
+                            "width": 30,
+                            "items": [
+                                {
+                                    "type": "Container",
+                                    "minHeight": "5px"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${field_1}",
+                                    "wrap": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": 30,
+                            "items": [
+                                {
+                                    "type": "Container",
+                                    "minHeight": "5px"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${Formatted ? Formatted : 'N/A'}",
+                                    "wrap": true
+                                }
+                            ]
+                        }
+                    ],
+                    "style": "good"
+                },
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.OpenUrl",
+                                    "title": "Send Wishes to ${field_1}",
+                                    "url": "${ChatLink}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "isVisible": "${equals(formatDateTime(field_2, 'MM-dd'), formatDateTime(utcNow(), 'MM-dd'))}",
+            "separator": true
+        },
+        {
+            "type": "Container",
+            "spacing": "Medium",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-",
+                                    "wrap": true,
+                                    "horizontalAlignment": "Left"
+                                }
+                            ]
+                        }
+                    ],
+                    "style": "default"
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "Upcoming Birthdays",
+            "size": "Medium",
+            "weight": "Bolder",
+            "spacing": "Large",
+            "separator": true
+        },
+        {
+            "type": "Container",
+            "$data": "${value}",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "minHeight": "40px",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "${ImageUrl.Url}",
+                                    "width": "48px",
+                                    "height": "48px"
+                                }
+                            ],
+                            "verticalContentAlignment": "Center",
+                            "width": 15
+                        },
+                        {
+                            "type": "Column",
+                            "width": 30,
+                            "items": [
+                                {
+                                    "type": "Container",
+                                    "minHeight": "5px"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${field_1}",
+                                    "wrap": true,
+                                    "weight": "Default"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Column",
+                            "width": 30,
+                            "items": [
+                                {
+                                    "type": "Container",
+                                    "minHeight": "5px"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${Formatted ? Formatted : 'N/A'}",
+                                    "wrap": true
+                                }
+                            ]
+                        }
+                    ],
+                    "style": "default"
+                }
+            ],
+            "isVisible": "${and(greater(formatDateTime(field_2, 'MM-dd'), formatDateTime(utcNow(), 'MM-dd')), equals(formatDateTime(field_2, 'MM'), formatDateTime(utcNow(), 'MM')))}",
+            "separator": true
+        },
+        {
+            "type": "Container",
+            "spacing": "Large",
+            "items": [
+                {
+                    "type": "TextBlock",
+                    "text": "________________________________________________________",
+                    "wrap": true
+                }
+            ]
+        },
+        {
+            "type": "Container",
+            "spacing": "Large"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Today's Work Anniversary",
+            "wrap": true,
+            "fontType": "Default",
+            "size": "Medium",
+            "weight": "Bolder",
+            "color": "Default"
+        },
+        {
+            "type": "Container",
+            "spacing": "Small"
+        },
+        {
+            "type": "ColumnSet",
+            "$data": "${value}",
+            "columns": [
+                {
+                    "type": "Column",
+                    "minHeight": "40px",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "${ImageUrl.Url}",
+                            "width": "48px",
+                            "height": "48px"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "width": 15
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${field_1}",
+                            "wrap": true,
+                            "size": "Default",
+                            "horizontalAlignment": "Left",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${DaysSinceJoining} Anniversary",
+                            "wrap": true,
+                            "isSubtle": true,
+                            "spacing": "Small",
+                            "size": "Small"
+                        }
+                    ],
+                    "verticalContentAlignment": "Top",
+                    "width": 30
+                },
+                {
+                    "type": "Column",
+                    "verticalContentAlignment": "Top",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": " ${formatDateTime(JoiningDate, 'dd/MM')}",
+                            "wrap": true,
+                            "size": "Default",
+                            "horizontalAlignment": "Right"
+                        }
+                    ],
+                    "width": 20
+                },
+                {
+                    "type": "Column",
+                    "width": "5px"
+                }
+            ],
+            "isVisible": "${equals(formatDateTime(JoiningDate, 'MM-dd'), formatDateTime(utcNow(), 'MM-dd'))}",
+            "separator": true,
+            "spacing": "Medium"
+        },
+        {
+            "type": "Container",
+            "spacing": "Medium",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-\\-",
+                                    "wrap": true,
+                                    "horizontalAlignment": "Left"
+                                }
+                            ]
+                        }
+                    ],
+                    "style": "default"
+                }
+            ]
+        },
+        {
+            "type": "TextBlock",
+            "text": "Anniversaries Coming Up",
+            "wrap": true,
+            "fontType": "Default",
+            "size": "Medium",
+            "weight": "Bolder",
+            "color": "Default",
+            "spacing": "Large",
+            "separator": true
+        },
+        {
+            "type": "Container",
+            "spacing": "Small"
+        },
+        {
+            "type": "ColumnSet",
+            "$data": "${value}",
+            "columns": [
+                {
+                    "type": "Column",
+                    "minHeight": "40px",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "url": "${ImageUrl.Url}",
+                            "width": "48px",
+                            "height": "48px"
+                        }
+                    ],
+                    "verticalContentAlignment": "Center",
+                    "width": 15
+                },
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "${field_1}",
+                            "wrap": true,
+                            "size": "Default",
+                            "horizontalAlignment": "Left",
+                            "weight": "Bolder"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${DaysSinceJoining} Anniversary",
+                            "wrap": true,
+                            "isSubtle": true,
+                            "spacing": "Small",
+                            "size": "Small"
+                        }
+                    ],
+                    "verticalContentAlignment": "Top",
+                    "width": 30
+                },
+                {
+                    "type": "Column",
+                    "verticalContentAlignment": "Top",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": " ${formatDateTime(JoiningDate, 'dd/MM')}",
+                            "wrap": true,
+                            "size": "Default",
+                            "horizontalAlignment": "Right"
+                        }
+                    ],
+                    "width": 20
+                },
+                {
+                    "type": "Column",
+                    "width": "5px"
+                }
+            ],
+            "isVisible": "${and(greater(formatDateTime(JoiningDate, 'MM-dd'), formatDateTime(utcNow(), 'MM-dd')), equals(formatDateTime(JoiningDate, 'MM'), formatDateTime(utcNow(), 'MM')))}",
+            "separator": true,
+            "spacing": "Medium"
+        }
+    ]
+}
+
+Sharepoint API:
+lists/getbytitle('AARK_BirthdayList')/items?$select=ImageUrl,field_1,JoiningDate,ChatLink,Formatted,DaysSinceJoining,EngagePostUrl,field_2&$orderby=field_2 asc

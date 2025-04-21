@@ -1,0 +1,144 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Newsletter",
+      "size": "Medium",
+      "weight": "Bolder"
+    },
+    {
+        "type": "Container",
+        "$data": "${newsletter}",
+        "items": [
+            {
+                "type": "Container",
+                "items": [
+                    {
+                        "type": "Image",
+                        "url": "${imgUrl}"
+                    }
+                ]
+            },
+            {
+                "type": "TextBlock",
+                "size": "small",
+                "text": "${Title}"
+            }
+        ],
+        "style": "default",
+        "spacing": "Medium",
+        "selectAction": {
+            "type": "Action.OpenUrl",
+            "url": "${url}"
+        }
+    },
+{
+                    "type": "TextBlock",
+                    "text": "________________________________________________________",
+                    "wrap": true,
+                    "spacing": "Large"
+        },
+{
+            "type": "Container",
+            "spacing": "Large"
+        },
+    {
+      "type": "TextBlock",
+      "text": "Latest News",
+      "size": "Medium",
+      "weight": "Bolder"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Here are the latest news articles:",
+      "wrap": true
+    },
+    {
+      "type": "Container",
+      "$data": "${newsItems}",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "  ",
+          "spacing": "Larger"
+        },
+        {
+          "type": "Image",
+          "url": "${ThumbnailUrl}",
+          "size": "Large",
+          "width":"350px",
+          "height":"200px",
+          "separator":true,
+          "spacing":"Large",
+          "horizontalAlignment": "Center"
+        },
+        {
+          "type": "TextBlock",
+          "text": "${PublishedDate}",
+          "wrap": true,
+          "spacing": "Medium",
+          "size":"small",
+          "isSubtle": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "${Title}",
+          "weight": "Bolder",
+          "wrap": true,
+          "size": "Medium"
+        },
+        {
+          "type": "TextBlock",
+          "text": "${Description}",
+          "wrap": true
+        },
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "title": "Read More",
+              "url": "${LinkToFullArticle}"
+            }
+          ],
+          "horizontalAlignment": "Center"
+        },
+        {
+          "type": "TextBlock",
+          "text": "",
+          "spacing": "Medium"
+        },
+        {
+          "type": "TextBlock",
+          "text": "",
+          "separator": true,
+          "spacing": "ExtraLarge"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
+
+
+Json Data:
+{
+  "tedx": [
+    {
+      "imgUrl":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/JoonSilverstein.png",
+      "Title": "Joon Silverstein",
+      "description": "Luxury, not landfill — the waste-free future of fashion.",
+      "url":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/SitePages/Joon%20Silverstein-%20Luxury,%20not%20landfill%20%E2%80%94%20the%20waste-free%20future%20of%20fashion.aspx"    
+    }
+  ],
+  "coffee": [
+    {
+      "imgUrl":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/theSecret.png",
+      "Title": "The Secret",
+      "description": "A man and woman had been married for more than 60 years. ",
+      "url":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/SitePages/The-Secret.aspx"    
+    }
+  ]
+}

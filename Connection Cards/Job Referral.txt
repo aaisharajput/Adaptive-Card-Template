@@ -1,0 +1,287 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Job Openings",
+                            "wrap": true,
+                            "size": "Medium",
+                            "weight": "Bolder"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "selectAction": {
+                        "type": "Action.OpenUrl",
+                        "url": "https://aarkglobalinc.com/career"
+                    },
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.OpenUrl",
+                                    "title": "Visit Site",
+                                    "url": "https://aarkglobalinc.com/careers"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "$data": "${value}",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": 75,
+                    "items": [
+                        {
+                            "type": "Container",
+                            "spacing": "Large",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "  ",
+                                    "wrap": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "TextBlock",
+                            "text": "${title}",
+                            "wrap": true,
+                            "weight": "Bolder",
+                            "size": "Medium"
+                        },
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "110px",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Openings: ${openings}",
+                                            "wrap": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Year Of Experience: ${experience}",
+                                            "wrap": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": "auto",
+                                    "spacing": "Small",
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "url": "https://raw.githubusercontent.com/pnp/AdaptiveCards-Templates/main/samples/visual-list/assets/arrow-right.png",
+                                            "size": "Small",
+                                            "width": "20px",
+                                            "selectAction": {
+                                                "type": "Action.OpenUrl",
+                                                "url": "${detailsUrl}"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "Container",
+                                            "items": [
+                                                {
+                                                    "type": "ColumnSet",
+                                                    "columns": [
+                                                        {
+                                                            "type": "Column",
+                                                            "width": "auto",
+                                                            "items": [
+                                                                {
+                                                                    "type": "Image",
+                                                                    "width": "30px",
+                                                                    "url": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/whatsapp48.png",
+                                                                    "size": "Small",
+                                                                    "horizontalAlignment": "Left",
+                                                                    "selectAction": {
+                                                                        "type": "Action.OpenUrl",
+                                                                        "url": "${whatsapp}"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "Column",
+                                                            "width": "auto",
+                                                            "items": [
+                                                                {
+                                                                    "type": "Image",
+                                                                    "width": "30px",
+                                                                    "url": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/linkedin48.png",
+                                                                    "size": "Small",
+                                                                    "horizontalAlignment": "Left",
+                                                                    "selectAction": {
+                                                                        "type": "Action.OpenUrl",
+                                                                        "url": "${linkedin}"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        {
+                                                            "type": "Column",
+                                                            "width": "auto",
+                                                            "items": [
+                                                                {
+                                                                    "type": "Image",
+                                                                    "width": "30px",
+                                                                    "url": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/mail48.png",
+                                                                    "size": "Small",
+                                                                    "horizontalAlignment": "Left",
+                                                                    "selectAction": {
+                                                                        "type": "Action.OpenUrl",
+                                                                        "url": "${email}"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "spacing": "Padding"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "verticalContentAlignment": "Center"
+                }
+            ],
+            "spacing": "Large",
+            "separator": true,
+            "style": "default"
+        }
+    ]
+}
+
+
+
+
+Data json:
+
+{
+  "value":[
+      {
+        "title":"Lead Mechanical Engineer",
+        "openings":"1",
+        "experience":"5-10",
+        "detailsUrl":"https://aarkglobalinc.com/careers/lead-mechanical-engineer",
+        "whatsapp":"https://wa.me/?text=*Lead Mechanical Engineer* - https://aarkglobalinc.com/careers/lead-mechanical-engineer",
+        "linkedin":"https://www.linkedin.com/sharing/share-offsite/?url=https://aarkglobalinc.com/careers/lead-mechanical-engineer&text=Lead Mechanical Engineer",
+        "email":"mailto:?subject=Check out this job!&body=Lead Mechanical Engineer:  https://aarkglobalinc.com/careers/lead-mechanical-engineer"
+      },
+      {
+        "title":"UI/UX Jr Designer",
+        "openings":"1",
+        "experience":"8-10",
+        "detailsUrl":"https://aarkglobalinc.com/careers/ui-ux-jr-designer",
+        "whatsapp":"https://wa.me/?text=*UI/UX Jr Designer* - https://aarkglobalinc.com/careers/ui-ux-jr-designer",
+        "linkedin":"https://www.linkedin.com/sharing/share-offsite/?url=https://aarkglobalinc.com/careers/ui-ux-jr-designer&text=UI/UX Jr Designer",
+        "email":"mailto:?subject=Check out this job!&body=UI/UX Jr Designer:  https://aarkglobalinc.com/careers/ui-ux-jr-designer"
+      },
+      {
+        "title":"Hardware Engineer",
+        "openings":"1",
+        "experience":"8-10",
+        "detailsUrl":"https://aarkglobalinc.com/careers/hardware-engineer",
+        "whatsapp":"https://wa.me/?text=*Hardware Engineer* - https://aarkglobalinc.com/careers/hardware-engineer",
+        "linkedin":"https://www.linkedin.com/sharing/share-offsite/?url=https://aarkglobalinc.com/careers/hardware-engineer&text=Hardware Engineer",
+        "email":"mailto:?subject=Check out this job!&body=Hardware Engineer:  https://aarkglobalinc.com/careers/hardware-engineer"
+      },
+      {
+        "title":"Senior Developer - Factory Automation",
+        "openings":"1",
+        "experience":"5-10",
+        "detailsUrl":"https://aarkglobalinc.com/careers/sr-developer-factory-automation",
+        "whatsapp":"https://wa.me/?text=*Senior Developer - Factory Automation* - https://aarkglobalinc.com/careers/sr-developer-factory-automation",
+        "linkedin":"https://www.linkedin.com/sharing/share-offsite/?url=https://aarkglobalinc.com/careers/sr-developer-factory-automation&text=Senior Developer - Factory Automation",
+        "email":"mailto:?subject=Check out this job!&body=Senior Developer - Factory Automation:  https://aarkglobalinc.com/careers/sr-developer-factory-automation"
+      },
+      {
+        "title":".Net Developer",
+        "openings":"1",
+        "experience":"8-12",
+        "detailsUrl":"https://aarkglobalinc.com/careers/net-developer",
+        "whatsapp":"https://wa.me/?text=*.Net Developer* - https://aarkglobalinc.com/careers/net-developer",
+        "linkedin":"https://www.linkedin.com/sharing/share-offsite/?url=https://aarkglobalinc.com/careers/net-developer&text=.Net Developer",
+        "email":"mailto:?subject=Check out this job!&body=.Net Developer:  https://aarkglobalinc.com/careers/net-developer"
+      },
+      {
+        "title":"Java Developer",
+        "openings":"1",
+        "experience":"5-6",
+        "detailsUrl":"https://aarkglobalinc.com/careers/java-developer",
+        "whatsapp":"https://wa.me/?text=*Java Developer* - https://aarkglobalinc.com/careers/java-developer",
+        "linkedin":"https://www.linkedin.com/sharing/share-offsite/?url=https://aarkglobalinc.com/careers/java-developer&text=Java Developer",
+        "email":"mailto:?subject=Check out this job!&body=Java Developer:  https://aarkglobalinc.com/careers/java-developer"
+      },
+      {
+        "title":"Python Developer",
+        "openings":"1",
+        "experience":"5-8",
+        "detailsUrl":"https://aarkglobalinc.com/careers/python-developer",
+        "whatsapp":"https://wa.me/?text=*Python Developer* - https://aarkglobalinc.com/careers/python-developer",
+        "linkedin":"https://www.linkedin.com/sharing/share-offsite/?url=https://aarkglobalinc.com/careers/python-developer&text=Python Developer",
+        "email":"mailto:?subject=Check out this job!&body=Python Developer:  https://aarkglobalinc.com/careers/python-developer"
+      },
+      {
+        "title":"Salesforce Lead",
+        "openings":"1",
+        "experience":"7-10",
+        "detailsUrl":"https://aarkglobalinc.com/careers/salesforce-lead",
+        "whatsapp":"https://wa.me/?text=*Salesforce Lead* - https://aarkglobalinc.com/careers/salesforce-lead",
+        "linkedin":"https://www.linkedin.com/sharing/share-offsite/?url=https://aarkglobalinc.com/careers/salesforce-lead&text=Salesforce Lead",
+        "email":"mailto:?subject=Check out this job!&body=Salesforce Lead:  https://aarkglobalinc.com/careers/salesforce-lead"
+      },
+      {
+        "title":"Sr. UI Developer",
+        "openings":"1",
+        "experience":"8-10",
+        "detailsUrl":"https://aarkglobalinc.com/careers/sr-ui-developer",
+        "whatsapp":"https://wa.me/?text=*Sr. UI Developer* - https://aarkglobalinc.com/careers/sr-ui-developer",
+        "linkedin":"https://www.linkedin.com/sharing/share-offsite/?url=https://aarkglobalinc.com/careers/sr-ui-developer&text=Sr. UI Developer",
+        "email":"mailto:?subject=Check out this job!&body=Sr. UI Developer:  https://aarkglobalinc.com/careers/sr-ui-developer"
+      }
+  ]
+}

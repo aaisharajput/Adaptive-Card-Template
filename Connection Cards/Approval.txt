@@ -1,0 +1,222 @@
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "Container",
+            "style": "default",
+            "bleed": true,
+            "items": [
+               
+                {
+                    "type": "Container",
+                    "$data": "${value}",
+                    "items": [
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                    "width": "80px",
+                                    "minHeight": "80px",
+                                    "items": [
+                                        {
+                                            "type": "Container",
+                                            "backgroundImage": {
+                                                "url": "${ImageUrl}",
+                                                "horizontalAlignment": "Center",
+                                                "verticalAlignment": "Center"
+                                            },
+                                            "minHeight": "80px",
+                                            "horizontalAlignment": "Center",
+                                            "verticalContentAlignment": "Center"
+                                        }
+                                    ],
+                                    "verticalContentAlignment": "Center",
+                                    "horizontalAlignment": "Left"
+                                },
+                                {
+                                    "type": "Column",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${Title}",
+                                            "wrap": true,
+                                            "weight": "Bolder",
+                                            "size": "Medium"
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "${description}",
+                                            "isSubtle": true,
+                                            "wrap": true,
+                                            "spacing": "Small",
+                                            "maxLines": 2
+                                        }
+                                    ],
+                                    "verticalContentAlignment": "Center",
+                                    "width": "stretch"
+                                }
+                            ],
+                            "selectAction": {
+                                "type": "Action.OpenUrl",
+                                "url": "${templateUrl}"
+                            },
+                            "style": "default"
+                        }
+                    ],
+                    "separator": true
+                }
+            ],
+            "spacing": "Medium",
+            "id": "tab_menu"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "backgroundImage": {
+        "horizontalAlignment": "Center"
+    }
+}
+
+
+Go to request list link:
+https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/
+Json Data:
+
+Design team:
+{
+  "value": [
+    {
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/LeaveIcon.png",
+      "Title": "Leave",
+      "description": "Request for Leave",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220JTM3K3RDKANTJ54A6YCJD7NGXE8ZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    },
+   {
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/BusinessTripIcon.png",
+      "Title": "Business Trip",
+      "description": "Request for Business Trip",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220GJ76KSGQD3FMGW2YEN88ZV50A18ZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    },{
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/ReimbursementIcon.png",
+      "Title": "Reimbursement",
+      "description": "Reimbursement such as travel and activity expense",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220GRA358CGVZYJKCBQ6N67DW7MMT8ZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    }
+  ]
+}
+
+Salesforce team:
+{
+  "value": [
+    {
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/LeaveIcon.png",
+      "Title": "Leave",
+      "description": "Request for Leave",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220J6YMED11WWGTHCX6CJ18PD3X7RRZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    }, {
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/BusinessTripIcon.png",
+      "Title": "Business Trip",
+      "description": "Request for Business Trip",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220H8SV6ZP4PT1PHNXG6Z37G6NCRM8ZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    },{
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/ReimbursementIcon.png",
+      "Title": "Reimbursement",
+      "description": "Reimbursement such as travel and activity expense",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220GK2TXPC8W1CTGDJW6VC21D5YYM8ZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    }
+  ]
+}
+
+Cognitive Team:
+{
+  "value": [
+    {
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/LeaveIcon.png",
+      "Title": "Leave",
+      "description": "Request for Leave",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220KH6E9Q5TQNEGJM0DT8A6VDTEZY8ZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    },
+   {
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/BusinessTripIcon.png",
+      "Title": "Business Trip",
+      "description": "Request for Business Trip",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220JNQ1Z2HR49M6KDW3S8PKXDP63H8ZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    },{
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/ReimbursementIcon.png",
+      "Title": "Reimbursement",
+      "description": "Reimbursement such as travel and activity expense",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220GCB8Z9SYTRSCJ5ZKWS2AYZEMEH8ZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    }
+  ]
+}
+
+Hardware Team:
+{
+  "value": [
+    {
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/LeaveIcon.png",
+      "Title": "Leave",
+      "description": "Request for Leave",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220KB33MHF7CK3RKDEEWQM1FZP63RRZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    },
+  {
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/BusinessTripIcon.png",
+      "Title": "Business Trip",
+      "description": "Request for Business Trip",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220GN5FK6345TSRHC5Q00VQBCPH0DRZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    },{
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/ReimbursementIcon.png",
+      "Title": "Reimbursement",
+      "description": "Reimbursement such as travel and activity expense",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220J7MN7MM59E2WK4ZZ13M7QEYNYCRZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    }
+  ]
+}
+
+Software:
+{
+  "value": [
+    {
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/LeaveIcon.png",
+      "Title": "Leave",
+      "description": "Request for Leave",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220HJ6TP4VA7K8WGDYKR6E718H51VRZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    },
+  {
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/BusinessTripIcon.png",
+      "Title": "Business Trip",
+      "description": "Request for Business Trip",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220KQH0KYQV42W6GD5T62WPDBADPW8ZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    },{
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/ReimbursementIcon.png",
+      "Title": "Reimbursement",
+      "description": "Reimbursement such as travel and activity expense",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220G24196QN34DAHXK858S1NB5SYRRZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    }
+  ]
+}
+
+Stepp:
+{
+  "value": [
+    {
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/LeaveIcon.png",
+      "Title": "Leave",
+      "description": "Request for Leave",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220KEPSARFPBCS6HD5JTERYQ097BARZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    },
+  {
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/BusinessTripIcon.png",
+      "Title": "Business Trip",
+      "description": "Request for Business Trip",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220KBZQ1D233MVGHNRJ42HKMHMNX58ZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    },{
+      "ImageUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/ReimbursementIcon.png",
+      "Title": "Reimbursement",
+      "description": "Reimbursement such as travel and activity expense",
+      "templateUrl":"https://teams.microsoft.com/l/entity/7c316234-ded0-4f95-8a83-8453d0876592/approvals/?context=%7B%22subEntityId%22%3A%220GH7DFJF5G2B4KME9SMX53SP5PTRZN2XTT1ACQTBJA168G7XPS14A%3A%3AshareLink%3A%22%7D"
+    }
+  ]
+}
+

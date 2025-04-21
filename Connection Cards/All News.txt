@@ -1,0 +1,133 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Latest News",
+      "size": "Medium",
+      "weight": "Bolder"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Here are the latest news articles:",
+      "wrap": true
+    },
+    {
+      "type": "Container",
+      "$data": "${newsItems}",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "  ",
+          "spacing": "Larger"
+        },
+        {
+          "type": "Image",
+          "url": "${ThumbnailUrl}",
+          "size": "Large",
+    "width":"350px",
+    "height":"200px",
+          "separator":true,
+          "spacing":"Large",
+          "horizontalAlignment": "Center"
+        },
+        {
+          "type": "TextBlock",
+          "text": "${PublishedDate}",
+          "wrap": true,
+          "spacing": "Medium",
+          "size":"small",
+          "isSubtle": true
+        },
+        {
+          "type": "TextBlock",
+          "text": "${Title}",
+          "weight": "Bolder",
+          "wrap": true,
+          "size": "Medium"
+        },
+        {
+          "type": "TextBlock",
+          "text": "${Description}",
+          "wrap": true
+        },
+        {
+          "type": "ActionSet",
+          "actions": [
+            {
+              "type": "Action.OpenUrl",
+              "title": "Read More",
+              "url": "${LinkToFullArticle}"
+            }
+          ],
+          "horizontalAlignment": "Center"
+        },
+        {
+          "type": "TextBlock",
+          "text": "",
+          "spacing": "Medium"
+        },
+        {
+          "type": "TextBlock",
+          "text": "",
+          "separator": true,
+          "spacing": "ExtraLarge"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
+
+
+
+
+Json Data:
+{
+  "newsItems": [
+    {
+      "ThumbnailUrl":  "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/semiWest.png",
+  "Title": "AARK Global Shines at SEMICON West 2024",
+      "Description": "San Francisco, CA — AARK Global made a significant impact at the SEMICON West conference from July 9th to 11th. The team showcased their latest innovative solutions and next-gen product demos at booth #5243.",
+      "PublishedDate": "July 9-11, 2024",
+      "LinkToFullArticle": "https://aarkglobalinc.com/resources/press-releases/aark-global-shines-at-semicon-west-2024"
+    },
+    {
+      "ThumbnailUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/ispec.png",
+      "Title": "AARK Global at ISPEC 2024",
+      "Description": "`We're thrilled to announce that AARK Global is a proud sponsor of the inaugural India Semiconductor and Packaging Ecosystem Conference (ISPEC)",
+      "PublishedDate": "Feb 2, 2024",
+      "LinkToFullArticle": "https://aarkglobalinc.com/resources/press-releases/aark-global-at-ispec-2024"
+    },
+    {
+      "ThumbnailUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/uday.png",
+      "Title": "Award - UDAY STARTUP SUMMIT",
+      "Description": "AARK Global Awarded the 'Best Upcoming Startup in Jammu and Kashmir' by FICCI FLO JK&L and SCHEAM India Holdings at Model Institute of Engineering and Technology, Jammu.",
+      "PublishedDate": "Jan 28, 2024",
+      "LinkToFullArticle": "https://aarkglobalinc.com/resources/press-releases/uday-startup-summit"
+    },
+    {
+      "ThumbnailUrl": "https://aarkglobalinc.com/semi-member.png",
+      "Title": "AARK Global Member of SEMI",
+      "Description": "SEMI is a catalyst for connection, collaboration and innovation, helping the semiconductor industry to deploy lifechanging tech worldwide.",
+      "PublishedDate": "Oct 30, 2023",
+      "LinkToFullArticle": "https://aarkglobalinc.com/resources/press-releases/aark-global-member-of-semi"
+    },
+    {
+      "ThumbnailUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/Inauguration.png",
+      "Title": "AARK Global Inaugurates Engineering and Innovation Headquarters in Jammu.",
+      "Description": "The inauguration ceremony marked a significant milestone for AARK Global Inc as it expands its operations to Jammu.",
+      "PublishedDate": "July 6, 2023",
+      "LinkToFullArticle": "https://aarkglobalinc.com/resources/press-releases/aark-global-inc-a-leading-silicon-valley-based-engineering"
+    },
+    {
+      "ThumbnailUrl": "https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/press.png",
+      "Title": "AARK Global Inc to open Engineering and Innovation Center in Jammu.",
+      "Description": "Founder of AARK Global Inc. Amit Kachroo adressing a press conference at jammu on thursday.",
+      "PublishedDate": "Feb 23, 2023",
+      "LinkToFullArticle": "https://aarkglobalinc.com/resources/press-releases/aark-global-inc-to-open-engineering&innovation-center-in-jammu"
+    }
+  ]
+}
+

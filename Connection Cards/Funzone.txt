@@ -1,0 +1,204 @@
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "Container",
+            "$data": "${value}",
+            "items": [
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "width": "stretch",
+                            "items": [
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${Title}",
+                                    "weight": "Bolder",
+                                    "size": "Medium"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "ColumnSet",
+                    "columns": [
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "${gameImg1}",
+                                    "size": "Medium"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${gameName1}",
+                                    "wrap": true,
+                                    "horizontalAlignment": "Center",
+                                    "size": "Small"
+                                }
+                            ],
+                            "width": "auto",
+                            "selectAction": {
+                                "type": "Action.OpenUrl",
+                                "url": "${gameUrl1}"
+                            }
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "${gameImg2}",
+                                    "size": "Medium"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${gameName2}",
+                                    "wrap": true,
+                                    "horizontalAlignment": "Center",
+                                    "size": "Small"
+                                }
+                            ],
+                            "width": "auto",
+                            "selectAction": {
+                                "type": "Action.OpenUrl",
+                                "url": "${gameUrl2}"
+                            }
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "${gameImg3}",
+                                    "size": "Medium"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${gameName3}",
+                                    "wrap": true,
+                                    "horizontalAlignment": "Center",
+                                    "size": "Small"
+                                }
+                            ],
+                            "width": "auto",
+                            "selectAction": {
+                                "type": "Action.OpenUrl",
+                                "url": "${gameUrl3}"
+                            }
+                        },
+                        {
+                            "type": "Column",
+                            "items": [
+                                {
+                                    "type": "Image",
+                                    "url": "${gameImg4}",
+                                    "size": "Medium"
+                                },
+                                {
+                                    "type": "TextBlock",
+                                    "text": "${gameName4}",
+                                    "wrap": true,
+                                    "horizontalAlignment": "Center",
+                                    "size": "Small"
+                                }
+                            ],
+                            "width": "auto",
+                            "selectAction": {
+                                "type": "Action.OpenUrl",
+                                "url": "${gameUrl4}"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TextBlock",
+                    "text": "   ",
+                    "weight": "Bolder",
+                    "size": "Medium",
+                    "spacing": "Medium"
+                }
+            ]
+        },
+        {
+                    "type": "Container",
+                    "width": "stretch",
+                    "selectAction": {
+                        "type": "Action.OpenUrl",
+                        "url": "https://www.msn.com/en-in/play?cgfrom=cg_landing_home_jumpbackin&cvid=6b13459c9f1245569a3f6d53c5a2e6bd&ei=17"
+                    },
+                    "items": [
+                        {
+                            "type": "ActionSet",
+                            "actions": [
+                                {
+                                    "type": "Action.OpenUrl",
+                                    "title": "Visit Site",
+                                    "url": "https://www.msn.com/en-in/play?cgfrom=cg_landing_home_jumpbackin&cvid=6b13459c9f1245569a3f6d53c5a2e6bd&ei=17"
+                                }
+                            ]
+                        }
+                    ]
+                }
+    ]
+}
+
+Data Json:
+{
+    "value": [
+        {
+        "Title": "🔥 Recommended For You",
+        "gameName1":"Jigsaw",
+        "gameImg1":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/jigsaw.png",
+        "gameUrl1":"https://www.msn.com/en-in/play/games/msjigsaw/cg-msjigsaw?cgfrom=cg_landing_home_recommended&cvid=bcd3a7b682364690b8e2f08a1dd143f1&ei=56",
+        "gameName2":"Sudoku",
+        "gameImg2":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/Sudoko.png",
+        "gameUrl2":"https://www.msn.com/en-in/play/games/microsoft-sudoku/cg-mssudoku?cgfrom=cg_landing_home_jumpbackin&cvid=9fcc8437c674485f9c6cb0fd7cf8a9eb&ei=38",
+        "gameName3":"Master Chess",
+        "gameImg3":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/Chess.png",
+        "gameUrl3":"https://www.msn.com/en-in/play/games/9nrl2nj7l6s1/cg-9nrl2nj7l6s1?cgfrom=cg_landing_home_recommended&cvid=bcd3a7b682364690b8e2f08a1dd143f1&ei=58",
+        "gameName4":"Ludo classic ",
+        "gameImg4":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/Ludo.png",
+        "gameUrl4":"https://www.msn.com/en-in/play/games/9nx8cntq3mgt/cg-9nx8cntq3mgt?cgfrom=cg_landing_home_recommended&cvid=9be6d4d15078412f8f3dffec7516cc86&ei=39",
+        "gamePath":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/SitePages/photos.aspx#diwali"
+      },
+    {
+        "Title": "✨ New Games",
+        "gameName1":"Tennis Play",
+        "gameImg1":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/Tennis.png",
+        "gameUrl1":"https://www.msn.com/en-in/play/games/9ndxnncpxsmx/cg-9ndxnncpxsmx?cgfrom=cg_landing_home_newgames&cvid=9be6d4d15078412f8f3dffec7516cc86&ei=48",
+        "gameName2":"Solitaire",
+        "gameImg2":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/Solitaire.png",
+        "gameUrl2":"https://www.msn.com/en-in/play/games/9nvrhvssswl5/cg-9nvrhvssswl5?cgfrom=cg_landing_home_newgames&cvid=9be6d4d15078412f8f3dffec7516cc86&ei=56",
+        "gameName3":"Ball Sort Quiz",
+        "gameImg3":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/BallSort.png",
+        "gameUrl3":"https://www.msn.com/en-in/play/games/9pjd64hpr6l6/cg-9pjd64hpr6l6?cgfrom=cg_landing_home_newgames&cvid=9be6d4d15078412f8f3dffec7516cc86&ei=62",
+        "gameName4":"Defenders",
+        "gameImg4":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/Defender.png",
+        "gameUrl4":"https://www.msn.com/en-in/play/games/9n8tv164mxzf/cg-9n8tv164mxzf?cgfrom=cg_landing_home_newgames&cvid=9be6d4d15078412f8f3dffec7516cc86&ei=73",
+        "gamePath":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/SitePages/photos.aspx#diwali"
+      },
+      {
+        "Title": "🏁 Racing",
+        "gameName1":"Rally Champ",
+        "gameImg1":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/Rally.png",
+        "gameUrl1":"https://www.msn.com/en-in/play/games/9pmdcq52j3hj/cg-9pmdcq52j3hj?cgfrom=cg_landing_home_racing&cvid=9be6d4d15078412f8f3dffec7516cc86&ei=78",
+        "gameName2":"Up Hill Racing",
+        "gameImg2":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/UpHill.png",
+        "gameUrl2":"https://www.msn.com/en-in/play/games/9mw8rk6nb6kr/cg-9mw8rk6nb6kr?cgfrom=cg_landing_home_racing&cvid=9be6d4d15078412f8f3dffec7516cc86&ei=80",
+        "gameName3":"Bike Racing 2",
+        "gameImg3":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/Bike.png",
+        "gameUrl3":"https://www.msn.com/en-in/play/games/9pjmwr3lfc0d/cg-9pjmwr3lfc0d?cgfrom=cg_landing_home_racing&cvid=9be6d4d15078412f8f3dffec7516cc86&ei=93",
+        "gameName4":"Rowing Sculls",
+        "gameImg4":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/Shared%20Documents/Viva%20Connection%20Assets/Rowing.png",
+        "gameUrl4":"https://www.msn.com/en-in/play/games/9pb4520p0gr9/cg-9pb4520p0gr9?cgfrom=cg_landing_home_racing&cvid=9be6d4d15078412f8f3dffec7516cc86&ei=100",
+        "gamePath":"https://aarkglobalinc.sharepoint.com/sites/AARKHub/SitePages/photos.aspx#diwali"
+      }
+  ]
+}
